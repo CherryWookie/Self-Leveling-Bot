@@ -142,9 +142,7 @@ We ended up completely rethinking our design as we kept running into the problem
 <img src="Photos-001/revisionsketch.jpg" alt="drawing" width="600"/>
 </p>
 
-<p align="center">
-<img src="Photos-001/IMG_20221205_134104.jpg" alt="drawing" width="300"/>
-</p>
+
 
 ## Robot Assembly
 #
