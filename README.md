@@ -564,18 +564,7 @@ void calcSpeed(double angle) {
 }
 ```
 
-</font>
-</details>
 
-<details>
-<summary> 
-<font size="5"> Final Code </font>
- </Summary>
-<br>
-<font size="1">
-FINAL CODE GOES HERE
-</font>
-</details>
 
 ____
 
