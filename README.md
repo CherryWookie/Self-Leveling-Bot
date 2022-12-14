@@ -547,25 +547,6 @@ void RGB_color(int red, int green, int blue) {
 
 
 
-
-### PID Control
-
-Our PID Controller (Proportional, Integral, Derivative), is calculated in the following function, where `Kp` is the proportional parameter, `Ki` is the integral parameter, and `Kd` is our derivative parameter. This was used to calculate our `motorspeed` value in order to adjust the speed for the smoothest possible curve to a balanced state.
-
-<font size="1">
-
-```C++
-void calcSpeed(double angle) {
-  error = targetAngle - angle;
-  errSum += error * loopTime;
-  errSum = constrain(errSum, -300, 300);
-  motorSpeed = Kp * error + Ki * errSum + Kd * (error - prevError) / loopTime;
-  prevError = error;
-}
-```
-
-
-
 ____
 
 ## PID Control
