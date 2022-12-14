@@ -90,10 +90,10 @@ Create a robot using an Arduino Uno and the above listed materials that is able 
 We started by testing the stepper motors and followed the online instructions on the webpage for the motor shield. We soldered the shield and the gyroscope.
 
 <p align="left">
-<img src="Photos-001/gyromod.jpg" alt="drawing" width="310"/>
-<align="right">
+<img src="Photos-001/gyromod.jpg" alt="drawing" width="309"/>
+<p align="right">
 <img src="Photos-001/motorshield.jpg" alt="drawing" width="309"/>
-<align="left">
+<align="center">
 <img src="Photos-001/testingmotors.jpg" alt="drawing">
 </p>
 
