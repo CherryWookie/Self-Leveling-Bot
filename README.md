@@ -322,12 +322,12 @@ void calcSpeed() {
   prevDif = difference;
 }
 ```</font>
-<details>
+</details>
 
 <details>
 <summary> 
 <font size="5"> Final Code </font>
- </Summary>
+ </summary>
 <br>
 <font size="1">
 
