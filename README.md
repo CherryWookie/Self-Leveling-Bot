@@ -110,6 +110,10 @@ After putting the motors and the new wheels on our robot frame, we found that th
 Our first test of the 3D print for the wheel rims didn't turn out very well as it printed out vertical instead of horizontal. To make it better, we switched it so that it was lying horizontal on the base plate and switched from non-soluble support material to water-soluble material so that we would end up with a cleaner product. We ended up re-printing a third time and this time opted for some larger wheels to fit our bigger robot design. 
 
 
+<p align="center">
+<img src="Photos-001/lasercuttings.jpg" alt="drawing" width="350"/>
+</p>
+
 
 <!-- ![image](Photos-001/IMG_20221205_134104.jpg) -->
 Above is the image of our laser cut components for our new design.
