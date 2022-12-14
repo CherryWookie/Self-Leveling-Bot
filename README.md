@@ -358,6 +358,9 @@ void calcSpeed(double angle) {
 <font size="1">
 
 ```C++
+// Michael S. & Ben S. 12/13/22
+// Final code for SLB
+   
 #include <Wire.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
