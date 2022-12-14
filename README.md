@@ -121,10 +121,6 @@ Platform Dimensions: 3.5 x 7 x 1/4" (x3) (Perhaps?)
 (9cm x 18cm)
 8.4 cm x 16 cm
 
-<p align="center">
-<img src="Photos-001/revisionsketch.jpg" alt="drawing" width="600"/>
-</p>
-
 For general robot design, we started out with a rough prototype version involving a decomissioned erector set as seen below. This Mark1 was very heavy in nature due to the amount of metal used. It was also quite tall and we soon realized that we would have to look at other methods for constructing a better robot with a better weight distribution. We had thought that more weight on the top would make it easier to balance the robot, and while this may be true in theory, it ended up making the entire robot too heavy and the motors ended up not being able to move it.
 
 <p align="left">
