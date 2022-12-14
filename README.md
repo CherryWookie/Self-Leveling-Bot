@@ -93,7 +93,7 @@ We started by testing the stepper motors and followed the online instructions on
 <img src="Photos-001/gyromod.jpg" alt="drawing" width="310"/>
 <align="right">
 <img src="Photos-001/motorshield.jpg" alt="drawing" width="309"/>
-<alight="left">
+<align="left">
 <img src="Photos-001/testingmotors.jpg" alt="drawing">
 </p>
 
