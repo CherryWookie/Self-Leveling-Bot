@@ -89,9 +89,9 @@ Create a robot using an Arduino Uno and the above listed materials that is able 
 We started by testing the stepper motors and followed the online instructions on the webpage for the motor shield. We soldered the shield and the gyroscope.
 
 <p align="left">
-<img src="Photos-001/gyromod.jpg" alt="drawing" width="301"/>
+<img src="Photos-001/gyromod.jpg" alt="drawing" width="310"/>
 <align="right">
-<img src="Photos-001/motorshield.jpg" alt="drawing" width="301"/>
+<img src="Photos-001/motorshield.jpg" alt="drawing" width="310"/>
 <align="center">
 <img src="Photos-001/testingmotors.jpg" alt="drawing">
 </p>
@@ -121,6 +121,9 @@ Platform Dimensions: 3.5 x 7 x 1/4" (x3) (Perhaps?)
 (9cm x 18cm)
 8.4 cm x 16 cm
 
+<p align="center">
+<img src="Photos-001/revisionsketch.jpg" alt="drawing" width="600"/>
+</p>
 
 For general robot design, we started out with a rough prototype version involving a decomissioned erector set as seen below. This Mark1 was very heavy in nature due to the amount of metal used. It was also quite tall and we soon realized that we would have to look at other methods for constructing a better robot with a better weight distribution. We had thought that more weight on the top would make it easier to balance the robot, and while this may be true in theory, it ended up making the entire robot too heavy and the motors ended up not being able to move it.
 
@@ -322,12 +325,35 @@ void calcSpeed() {
   prevDif = difference;
 }
 ```</font>
+<details>
+
+
+
+
+
+### PID Control
+
+Our PID Controller (Proportional, Integral, Derivative), is calculated in the following function, where `Kp` is the proportional parameter, `Ki` is the integral parameter, and `Kd` is our derivative parameter. This was used to calculate our `motorspeed` value in order to adjust the speed for the smoothest possible curve to a balanced state.
+
+<font size="1">
+
+```C++
+void calcSpeed(double angle) {
+  error = targetAngle - angle;
+  errSum += error * loopTime;
+  errSum = constrain(errSum, -300, 300);
+  motorSpeed = Kp * error + Ki * errSum + Kd * (error - prevError) / loopTime;
+  prevError = error;
+}
+```
+
+</font>
 </details>
 
 <details>
 <summary> 
 <font size="5"> Final Code </font>
- </summary>
+ </Summary>
 <br>
 <font size="1">
 
@@ -543,9 +569,6 @@ void RGB_color(int red, int green, int blue) {
 ```
 </font>
 </details>
-
-
-
 
 ____
 
