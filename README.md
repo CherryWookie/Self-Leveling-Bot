@@ -39,9 +39,10 @@ Michael Sell (Lab partner: Ben Schaser)
 #
 * `Arduino UNO`
 
-* `2 Stepper Motors (42mm High Torque Hybrid Stepping Motor)`
-    * [LINK TO WEBPAGE](https://www.adafruit.com/product/324)
+* `2 NEMA 17 Stepper Motors (42mm High Torque Hybrid Stepping Motor)`
+    * [WEBPAGE for initial motors](https://www.adafruit.com/product/324)
     * [DataSheet][def]
+    * [WEBPAGE for secondary motors](https://www.amazon.com/STEPPERONLINE-Stepper-Bipolar-Connector-compatible/dp/B00PNEQKC0/ref=pd_lpo_1?pd_rd_w=VVyFf&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=Q3J30165BRB4FEZH3M7K&pd_rd_wg=fr7PN&pd_rd_r=af540885-be9c-4284-956a-336d7fa965b7&pd_rd_i=B00PNEQKC0&psc=1)
 
 [def]: motordatasheet.jpeg
 
@@ -87,21 +88,28 @@ Create a robot using an Arduino Uno and the above listed materials that is able 
 
 We started by testing the stepper motors and followed the online instructions on the webpage for the motor shield. We soldered the shield and the gyroscope.
 
-We had to make sure the .h files were also in the arduino folder.
+<p align="left">
+<img src="Photos-001/gyromod.jpg" alt="drawing" width="310"/>
+<align="right">
+<img src="Photos-001/motorshield.jpg" alt="drawing" width="310"/>
+<alight="left">
+<img src="Photos-001/testingmotors.jpg" alt="drawing">
+</p>
 
-After putting the motors and the new wheels on our robot frame, we found that the motors were not making us very happy. For one, they didn't seem to be able to go fast enough. They produced very little torque and they were very jerky in motion as we have to step each one at a time instead of running them simultaneously.
+We had to make sure the .h files (all the required libraries) were also in the arduino folder.
+
+After putting the motors and the new wheels on our robot frame, we found that the motors were not making us very happy. For one, they didn't seem to be able to go fast enough. They produced very little torque and they were very jerky in motion as we have to step each one at a time instead of running them simultaneously. To remedy this, we went from the initial stepper motors and moved to our secondary stepper motors. These were rated for 2A instead of 350mA and supposedly had a higher torque at around .5NM. There is a calculation based on the weight and height of your robot to calculate how much torque is necessary for motors but we didn't do that because we were lazy. Also there weren't that many options for stepper motors so we just picked the one that could deliver the most torque without being too big. 
+
+
 
 ## 3D Printing/Laser Cutting
 #
 
 `Laser Cut thickness for red line: .072pt, Red line`
 
-Our first test of the 3D print for the wheel rims didn't turn out very well as it printed out vertical instead of horizontal. To make it better, we switched it so that it was lying horizontal on the base plate and switched from non-soluble support material to water-soluble material so that we would end up with a cleaner product. We ended up re-printing a third time and this time opted for some larger wheels to fit our bigger robot design. Our final dimensions for the wheels were as follows: 
+Our first test of the 3D print for the wheel rims didn't turn out very well as it printed out vertical instead of horizontal. To make it better, we switched it so that it was lying horizontal on the base plate and switched from non-soluble support material to water-soluble material so that we would end up with a cleaner product. We ended up re-printing a third time and this time opted for some larger wheels to fit our bigger robot design. 
 
 
-We ended up completely rethinking our design as we kept running into the problem of our robot falling over too fast and the motors not having enough torque/speed to recover. We hoped that creating a chassis our of wood while making it smaller would aid in this problem. 
-
-<img src="Photos-001/IMG_20221205_134104.jpg" alt="drawing" width="300"/>
 
 <!-- ![image](Photos-001/IMG_20221205_134104.jpg) -->
 Above is the image of our laser cut components for our new design.
@@ -113,24 +121,81 @@ Platform Dimensions: 3.5 x 7 x 1/4" (x3) (Perhaps?)
 (9cm x 18cm)
 8.4 cm x 16 cm
 
-For general robot design, we started out with a rough
+<p align="center">
+<img src="Photos-001/revisionsketch.jpg" alt="drawing" width="600"/>
+</p>
 
-Eventually, after a few days of adjusting parameters and trying different methods, we concluded the new stepper motors were still not fast enough and were not stepping in sync, causing the bot to shake violently, twist, and fall over. We then went to Dr. Kuehns laboratory and got two of his motors. They turned out to be
+For general robot design, we started out with a rough prototype version involving a decomissioned erector set as seen below. This Mark1 was very heavy in nature due to the amount of metal used. It was also quite tall and we soon realized that we would have to look at other methods for constructing a better robot with a better weight distribution. We had thought that more weight on the top would make it easier to balance the robot, and while this may be true in theory, it ended up making the entire robot too heavy and the motors ended up not being able to move it.
+
+<p align="left">
+<img src="Photos-001/firstbot.jpg" alt="drawing" width="300"/>
+<align="right">
+<img src="Photos-001/ben&bot.jpg" alt="drawing" width="300"/>
+</p>
+
+Eventually, after a few days of adjusting parameters and trying different methods, we concluded the new stepper motors were still not fast enough and were not stepping in sync, causing the bot to shake violently, twist, and fall over. We then went to Dr. Kuehns laboratory and got two of his DC Planetary Gearbox motors. One of the motors he had was great with an integrated gearbox of 612RPM. This had enough speed and plenty of torque for our purposes. Unfortunately, the other gearbox was set at 60RPM and so we were unable to use them simultaneously. We purchased two more pairs of DC motors from American Science and Surplus but we quickly discovered that there was not enough torque being generated by either kind. 
+
+We ended up completely rethinking our design as we kept running into the problem of our robot falling over too fast and the motors not having enough torque/speed to recover. We hoped that creating a chassis out of wood while making it smaller would aid in this problem. 
+
+
+<p align="center">
+<img src="Photos-001/revisionsketch.jpg" alt="drawing" width="600"/>
+</p>
+
+<p align="center">
+<img src="Photos-001/IMG_20221205_134104.jpg" alt="drawing" width="300"/>
+</p>
 
 ## Robot Assembly
 #
 
 `Note - Black M3 screws used to hold motors in brackets are Professor Brewsters! (Now the silver M3 screws*)`
 
+Bonding agent used: Locktite Professional Performance Spray Adhesive (Obtained from Dr. Kuehn)
+
+
+<p align="center">
+<img src="Photos-001/secondbot.jpg" alt="drawing" width="600"/>
+</p>
+
+<p align="center">
+<img src="Photos-001/secondbottop.jpg" alt="drawing" width="600"/>
+</p>
+
+After lasercutting a completely new design to accomodate our DC motors, we went back to our secondary frame and resorted to using the stepper motors. Our final design was quite good with a solid structural integrity and pleasing asthetic:
+
+<p align="center">
+<img src="Photos-001/finalbot.jpg" alt="drawing" width="600"/>
+</p>
+<p align="center">
+<img src="Photos-001/finalbotunder.jpg" alt="drawing" width="600"/>
+</p>
+
+(Yes we added RGB lights and a speaker)
+
 ## Code
 #
 
-For the software, we used the instructional resources above as a rough guide of what to do. We started by using the accelerometer along with the ```atan2(x,y)``` function in order to get an angle from the acceleration. We then gathered the data from the gyroscope. The angle from the acceleration is very consistent but has to deal with gravity and acceleration in other directions while the gyroscope module has some float or accumulated error. Both of these methods have certain drawbacks, so, in order to remedy this, we applied both through a complementary filter. This allowed us to modify our output to optimize the accuracy and stability of our output angle.
-<font size = "1">
+For the software, we used the instructional resources above as a rough guide of what to do. We started by using the accelerometer along with the ```atan2(x,y)``` function in order to get an angle from the acceleration. We then gathered the data from the gyroscope. The angle from the acceleration is very consistent but has to deal with gravity and acceleration in other directions while the gyroscope module has some float or accumulated error. Both of these methods have certain drawbacks, so, in order to remedy this, we applied both through a complementary filter. This allowed us to modify our output to optimize the accuracy and stability of our output angle. 
+
+
+
+
+
+When adjusting PID parameters, we increased `Kd` until the robot just barely overshot itself when trying to correct and then turned it down slightly to just before that threshold. Secondly, we adjusted `Ki` to apply a damping of motion to the equation so that our robot would correct with out overshooting. We finally adjusted the `Ki` parameter but found that this value seemed to be detrimental to the functionality of our stepper motors and so we kept this value << 1
+
+With adjusting the PID control, we found it was much easier to adjust the PID parameters using potentiometers in real-time instead of guessing a value and uploading the code hundreds of times. We used a simple 10k Ohm pot to tun ours. 
+
+<details>
+<summary> 
+<font size="5">Early Iteration of Code </font>
+</Summary>
+<br>
+<font size="1">
 
 ```C++
 // Michael Sell and Ben Schaser
-// Full code:
+// Full code (early version):
 
 #include <Wire.h>
 #include <Adafruit_MPU6050.h>
@@ -259,15 +324,92 @@ void calcSpeed() {
   motorSpeed = Kp * difference + Ki * difSum * loopTime + Kd * (difference - prevDif) / loopTime;
   prevDif = difference;
 }
-```
-</font>
+```</font>
+<details>
+
+
+
+
 
 ### PID Control
-pain
+
+Our PID Controller (Proportional, Integral, Derivative), is calculated in the following function, where `Kp` is the proportional parameter, `Ki` is the integral parameter, and `Kd` is our derivative parameter. This was used to calculate our `motorspeed` value in order to adjust the speed for the smoothest possible curve to a balanced state.
+
+<font size="1">
+
+```C++
+void calcSpeed(double angle) {
+  error = targetAngle - angle;
+  errSum += error * loopTime;
+  errSum = constrain(errSum, -300, 300);
+  motorSpeed = Kp * error + Ki * errSum + Kd * (error - prevError) / loopTime;
+  prevError = error;
+}
+```
+
+</font>
+</details>
+
+<details>
+<summary> 
+<font size="5"> Final Code </font>
+ </Summary>
+<br>
+<font size="1">
+FINAL CODE GOES HERE
+</font>
+</details>
+
+____
+
+## PID Control
+
+Our PID Controller (Proportional, Integral, Derivative), is calculated in the following function, where `Kp` is the proportional parameter, `Ki` is the integral parameter, and `Kd` is our derivative parameter. This was used to calculate our `motorspeed` value in order to adjust the speed for the smoothest possible curve to a balanced state.
+
+<font size="1">
+
+```C++
+void calcSpeed(double angle) {
+  error = targetAngle - angle;
+  errSum += error * loopTime;
+  errSum = constrain(errSum, -300, 300);
+  motorSpeed = Kp * error + Ki * errSum + Kd * (error - prevError) / loopTime;
+  prevError = error;
+}
+```
+
+</font>
+
 
 ## Troubleshooting
 #
+Where to start?
+
+This project was objectively about 90% troubleshooting, whether physical design troubleshooting or software issues. Our biggest struggle was finding motors that worked for us and figuring out how to use them to their fullest potential. Our initial stepper motors were underpowered for our purposes but the second motors should have had enough power for our purposes. We were unable to get our motors to spin as fast as we needed for a long time. Below is a list of things that we did in order to increase our motorspeed and efficiency:
+
+1. Increase the I2C Bus Speed between the arduino and Adafruit motorshield with the following command:
+```C++
+TWBR = ((F_CPU/400000l) - 16) / 2; // This increases the clock speed to 4KHz instead of 1KHz. Make sure to place this line in the setup() loop
+```
+2. Use the `AccelStepper` library for more integrated simultaneous motor dynamics.
+
+3. Find the maximum RPM of the motor with trial and error and don't go over that speed.
+
+4. Supply enough current to the motors.
+
+5. Although we didn't do this, we believe that using a common H-bridge motor speed controller as apposed to the Adafruit motorshield would allow for faster motor speeds due to the constraning 1.2A max limit for the motorshield. Because of this, we were unable to push the stepper motors to their 2A (each) limit.
+
+6. *IMPORTANT:* Delete/comment out ALL `serial` commands. (including `serial.begin()`, `serial.print()` etc.) This slows down the loop speed dramatically and reduces the speed of the motors by a significant margin. 
+
+Another area of troubleshooting was the software. We were unable to reliably get angular readings at first until we realized that the gyroscope module was accumulating error and was throwing the system off. We remedied this through some simple tweaks with our complimentary filter and ended up switching completely to a Kalman filter for a more stable angle reading.
+
+Along with this, we were getting some very wild oscillations in our motorspeed when our angles were small, giving rise to a very violent shaking motion when the robot was on. To fix this problem, we found out that it was potentially because of our PID parameters being set too high. After turning down the parameters and multiplying the motorspeed output by an arbitrary integer amount to increase the speed, we started to obtain a smoother rolling bot. 
+
 
 ## Performance
 #
 
+Performace was relative for our robot, although it didn't perform completely sans human interference like we had hoped. We had a few guesses as to why this was the case. First, the current limiting motorshield wasn't helping our case. Second, the motors themselves perhaps weren't the best options for our purposes. Some higher-quality DC gearbox motors might have been better. Finally, we noticed that the robot was having a hard time balancing due to the three wires connecting it to the power supply. We didn't have sufficient battery power to run the motors with our 5 AA batteries so it was a neccessary component for running our robot. Because of this, the balance for the robot was extremely variable in whichever direction the wires were pulling. Because of this, it made it almost impossible to fine tune our PID parameters to adjust it for the perfect balance. An higher capacity battery pack would be a necessity for something like this in future iterations. That being said, our Mk.3 bot was able to self balance with minimal human interaction and the proof of concept was definitelly there. 
+
+
+![Alt Text](Photos-001/finalvid.gif)
