@@ -66,8 +66,7 @@ Michael Sell (Lab partner: Ben Schaser)
 
 * `Wheels/Tires`
     * Anything around 10cm diameter wheels should suffice. Preferably a good amount of grip for the the bot to maintain traction with various surfaces. In our case, we will be 3D Printing the wheel rims and using rubber tape to wrap around the rims for our "tires".
-    * [Small Rims STL](wheel-rims.stl)
-    * [Big Rims STL](big-wheels.stl)
+    * [STL FILE](wheel-rims.stl)
 
 * `Hardware`
     * Various screws, nuts, etc. that we have yet to determine
@@ -90,9 +89,9 @@ Create a robot using an Arduino Uno and the above listed materials that is able 
 We started by testing the stepper motors and followed the online instructions on the webpage for the motor shield. We soldered the shield and the gyroscope.
 
 <p align="left">
-<img src="Photos-001/gyromod.jpg" alt="drawing" width="309"/>
-<p align="right">
-<img src="Photos-001/motorshield.jpg" alt="drawing" width="309"/>
+<img src="Photos-001/gyromod.jpg" alt="drawing" width="310"/>
+<align="right">
+<img src="Photos-001/motorshield.jpg" alt="drawing" width="310"/>
 <align="center">
 <img src="Photos-001/testingmotors.jpg" alt="drawing">
 </p>
