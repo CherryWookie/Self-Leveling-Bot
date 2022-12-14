@@ -66,7 +66,8 @@ Michael Sell (Lab partner: Ben Schaser)
 
 * `Wheels/Tires`
     * Anything around 10cm diameter wheels should suffice. Preferably a good amount of grip for the the bot to maintain traction with various surfaces. In our case, we will be 3D Printing the wheel rims and using rubber tape to wrap around the rims for our "tires".
-    * [STL FILE](wheel-rims.stl)
+    * [Small Rims STL](wheel-rims.stl)
+    * [Big Rims STL](big-wheels.stl)
 
 * `Hardware`
     * Various screws, nuts, etc. that we have yet to determine
